@@ -1,0 +1,11 @@
+task reInstall {
+    group "install"
+    dependsOn  "installDebug"
+    dependsOn "uninstallDebug"
+    mustRunAfter "uninstallDebug"
+    doLast {
+        println("                   ")
+        println("RE-INSTALL COMPLETE")
+        println("                   ")
+    }
+}	
